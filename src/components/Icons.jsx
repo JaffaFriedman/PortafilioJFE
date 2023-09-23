@@ -20,8 +20,6 @@ export const GitHubIcon = ({ className, ...rest }) => (
     viewBox='0 0 20 20'
     width='2em'
     height='2em'
-    {...rest}
-    className={`w-full h-auto ${className}`}
   >
     <title>{'github [#142]'}</title>
     <path
@@ -38,8 +36,6 @@ export const LinkedInIcon = ({ className, ...rest }) => (
     viewBox='1 1 13 13'
     width='2em'
     height='2em'
-    {...rest}
-    className={`w-full h-auto ${className}`}
   >
     <path
       fill='#0A66C2'
