@@ -8,13 +8,13 @@ import { AnimatedText } from '@/components/AnimatedText'
 
 export default function Home () {
   return (
-    <div className='relative bg-neutral-900'>
+    <div className='relative bg-neutral-900 bg-gradient-to-r'>
       <div className='relative h-80 overflow-hidden bg-cyan-600 md:absolute md:left-0 md:h-full md:w-1/2 lg:w-1/2 '>
         <Image
           className='h-full w-full object-cover'
           width={500}
           height={500}
-          src='https://res.cloudinary.com/djlyfyxyv/image/upload/v1695480464/iu7ovypk48fapnl2pr2w.webp'
+          src='https://res.cloudinary.com/djlyfyxyv/image/upload//a_hflip/v1695480464/iu7ovypk48fapnl2pr2w.webp'
           alt=''
         />
         <svg
@@ -50,7 +50,7 @@ export default function Home () {
           <p className='mt-2 text-3xl font-bold tracking-tight text-neutral-50 sm:text-4xl'>
             Transformando el Mundo Digital
           </p>
-          <p className='mt-6 text-base leading-7 text-neutral-300'>
+          <p className='mt-6 text-base leading-7 text-neutral-50'>
             Con más de 30 años en la industria tecnológica, desde el corazón de
             la administración financiera hasta las líneas de código que impulsan
             el web de hoy. Mi pasión es simplificar lo complejo, innovar y
