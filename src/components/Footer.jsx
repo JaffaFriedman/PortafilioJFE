@@ -11,7 +11,7 @@ import {
 
 const datos = [
   { name: '+569 9879 7468', href: '#', icon: Telefono },
-  { name: 'Isabel la Catolica 7350', href: '#', icon: Direccion },
+  { name: 'Isabel la Católica 7350', href: '#', icon: Direccion },
   { name: 'jaffa.friedman@gmail.com', href: '#', icon: Email }
 ]
 const redes = [
@@ -21,7 +21,7 @@ const redes = [
 ]
 export const Footer = () => {
   return (
-    <footer className='bg-gray-300' aria-labelledby='footer-heading'>
+    <footer className='bg-neutral-300 ' aria-labelledby='footer-heading'>
       <div className='mx-auto max-w-7xl px-3 pb-2 sm:pt-2 lg:px-2 lg:pt-2'>
         <div className='xl:grid xl:grid-cols-3 xl:gap-8'>
           <div className='grid grid-cols-1 '>
@@ -29,10 +29,10 @@ export const Footer = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className='flex items-left justify-left gap-x-2.5  font-semibold text-gray-900 hover:bg-gray-100'
+                className='flex items-left justify-left gap-x-2.5  font-semibold text-cyan-600 hover:bg-neutral-100'
               >
                 <item.icon
-                  className='h-7 w-7 flex-none text-gray-400'
+                  className='h-7 w-7 flex-none text-cyan-600'
                   aria-hidden='true'
                 />
                 {item.name}
@@ -50,10 +50,10 @@ export const Footer = () => {
                   x
                   href={item.href}
                   target={'_blank'}
-                  className='text-gray-900 hover:bg-gray-100'
+                  className='text-cyan-900 hover:bg-neutral-100'
                 >
                   <item.icon
-                    className='h-8 w-8 flex-none text-gray-400'
+                    className='h-8 w-8 flex-none text-cyan-600'
                     aria-hidden='true'
                   />
                   {item.name}

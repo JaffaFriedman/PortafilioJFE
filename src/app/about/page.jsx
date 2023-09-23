@@ -5,8 +5,8 @@ export const metadata = {
 }
 
 import {
+  TarjetaIcon,
   MoneyIcon,
-  LightBulbIcon,
   CodeIcon,
   BookOpenIcon
 } from './../../components/Icons'
@@ -16,13 +16,13 @@ const features = [
     name: 'Experto en Tecnología Financiera',
     description:
       '13 años en la administración y tecnología detrás de tarjetas de crédito, con una profunda comprensión de sus intricados sistemas.',
-    icon: MoneyIcon
+    icon: TarjetaIcon
   },
   {
     name: 'Emprendedor Apasionado',
     description:
       '20 años de experiencia en mi propia empresa de asesorías, proporcionando soluciones innovadoras a retos empresariales.',
-    icon: LightBulbIcon
+    icon: MoneyIcon
   },
   {
     name: 'Desarrollador Web Full Stack',
@@ -42,13 +42,13 @@ export default function Page () {
     <div className='bg-white py-24 sm:py-32'>
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         <div className='mx-auto max-w-2xl lg:text-center'>
-          <h2 className='text-base font-semibold leading-7 text-indigo-600'>
+          <h2 className='text-base font-semibold leading-7 text-cyan-600'>
             En cambio constante
           </h2>
-          <p className='mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
+          <p className='mt-2 text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl'>
             Un Viaje a Través del Mundo Tecnológico
           </p>
-          <p className='mt-6 text-lg leading-8 text-gray-600'>
+          <p className='mt-6 text-lg leading-8 text-neutral-600'>
             Desde mis primeros días trabajando en empresas administradoras de
             tarjetas de crédito hasta el lanzamiento de mi propia empresa de
             asesorías, he estado en el centro de la evolución tecnológica y
@@ -63,16 +63,16 @@ export default function Page () {
           <dl className='grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16'>
             {features.map(feature => (
               <div key={feature.name} className='relative pl-16'>
-                <dt className='text-base font-semibold leading-7 text-gray-900'>
+                <dt className='text-base font-semibold leading-7 text-neutral-900'>
                   <div className='absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg '>
                     <feature.icon
-                      className='h-6 w-6 text-white'
+                      className='h-6 w-6 text-neutral-50'
                       aria-hidden='true'
                     />
                   </div>
                   {feature.name}
                 </dt>
-                <dd className='mt-2 text-base leading-7 text-gray-600'>
+                <dd className='mt-2 text-base leading-7 text-neutral-600'>
                   {feature.description}
                 </dd>
               </div>

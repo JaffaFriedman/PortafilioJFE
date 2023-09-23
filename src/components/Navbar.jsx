@@ -5,12 +5,25 @@ import { Popover } from '@headlessui/react'
 import { Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import {
+  PortafolioIcon,
+  CrudIcon,
+  WeatherIcon,
+  EcommerceIcon,
+  LandingIcon,
+  RestorantIcon,
+  ContactIcon,
+  UserIcon,
+  ToolsIcon
+} from './Icons'
+
 const proyectos = [
   {
     name: 'Landing Page',
     description: 'Para una tienda que vende papel mural.',
     tecnologia: 'html, ccs y bootstrap.',
     href: 'https://jaffafriedman.github.io/Dekko/',
+    icon: LandingIcon,
     imageUrl:
       'https://res.cloudinary.com/djlyfyxyv/image/upload/v1695327398/Udd/Landing1_povu0s.jpg'
   },
@@ -21,6 +34,7 @@ const proyectos = [
     tecnologia:
       'html, ccs, bootstrap, javascript, persistencia de datos en localStorage y uso  DOM ',
     href: 'https://jaffafriedman.github.io/M1_CRUD/',
+    icon: CrudIcon,
     imageUrl:
       'https://res.cloudinary.com/djlyfyxyv/image/upload/v1695327398/Udd/Crud_m1wkkn.jpg'
   },
@@ -31,6 +45,7 @@ const proyectos = [
     tecnologia:
       'html, ccs, bootstrap, javascript, node.js, chart.j, apis integradas mapbox y openweathermap.',
     href: 'https://jaffafriedman.github.io/M2_DASHBOARD/',
+    icon: WeatherIcon,
     imageUrl:
       'https://res.cloudinary.com/djlyfyxyv/image/upload/v1695327398/Udd/Dashboard_jb7enp.jpg'
   },
@@ -40,7 +55,8 @@ const proyectos = [
     tecnologia:
       'html, ccs, bootstrap, javascript, node.js, react, mui, firebase',
     href: 'https://master--wondrous-marigold-ae5264.netlify.app/',
-    imageUrl:
+    icon: RestorantIcon,
+    mageUrl:
       'https://res.cloudinary.com/djlyfyxyv/image/upload/v1695327398/Udd/Restoran_x1xkv5.jpg'
   },
   {
@@ -50,6 +66,7 @@ const proyectos = [
     tecnologia:
       'html, ccs, bootstrap, javascript, node.js, react, mui, mongodb',
     href: 'https://dekkoww.cl/',
+    icon: EcommerceIcon,
     imageUrl:
       'https://res.cloudinary.com/djlyfyxyv/image/upload/v1695327398/Udd/Ecommerce_nv6zhx.jpg'
   },
@@ -58,36 +75,44 @@ const proyectos = [
     description: 'Portafolio personal, este mismo proyecto.',
     tecnologia: 'html, tailwind, javascript, next.js',
     href: '/',
+    icon: PortafolioIcon,
     imageUrl:
       'https://res.cloudinary.com/djlyfyxyv/image/upload/v1695001000/Calendario/mifoto_rxrtcu.png'
   }
 ]
 const secciones = [
   {
-    name: 'Sobre mi',
-    description: 'Breve resumen de mi experiencia',
-    href: '/about'
+    name: 'Mi experiencia',
+    description: 'Breve resumen de mi experiencia profesionales',
+    href: '/about',
+    icon: UserIcon
   },
   {
     name: 'Habilidades',
-    description: 'Habilidades y experiencia',
-    href: '/habilidades'
+    description: 'Habilidades técnicas',
+    href: '/habilidades',
+    icon: ToolsIcon
   },
   {
-    name: 'Contactame',
+    name: 'Contáctame',
     description: 'Información de contacto',
-    href: '/contacto'
+    href: '/contacto',
+    icon: ContactIcon
   }
 ]
 export const Navbar = () => {
   return (
     <>
-      <header className='bg-gray-300 w-full px-32 py-8 font-medium flex items-center justify-between'>
-      <div className='w-16 h-16 bg-black text-white flex items-center justify-center font-bold text-2xl rounded-full'>
-          JF
+      <header className='bg-neutral-300  text-cyan-600  w-full px-32 py-8 font-medium flex items-center justify-between'>
+        <div className='w-12 h-12 bg-cyan-600 text-neutral-50 flex items-center justify-center font-bold text-2xl rounded-full'>
+          <a href="/" className='font-bold text-cyan-50'>
+            JFE
+            <span className='absolute inset-0' />
+          </a>
         </div>
-        <Popover className='relative ms-3 mt-5'>
-          <Popover.Button className='inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900'>
+
+        <Popover className='relative ms-3 mt-3'>
+          <Popover.Button className='inline-flex items-center gap-x-1 text-sm font-semibold leading-6  text-cyan-600  '>
             <span>Acerca de Mi</span>
             <ChevronDownIcon className='h-5 w-5' aria-hidden='true' />
           </Popover.Button>
@@ -102,26 +127,24 @@ export const Navbar = () => {
             leaveTo='opacity-0 translate-y-1'
           >
             <Popover.Panel className='absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4'>
-              <div className='w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5'>
+              <div className='w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-neutral-900/5'>
                 <div className='p-4'>
                   {secciones.map(item => (
                     <div
                       key={item.name}
-                      className='group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-200'
+                      className='group relative flex gap-x-6 rounded-lg p-4 hover:bg-neutral-200'
                     >
+                      <div className='mt-4 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-neutral-50 group-hover:bg-white'>
+                        <item.icon className="h-5 w-5 flex-none text-cyan-600" aria-hidden="true" />
+                      </div>
                       <div>
-                        <a href={item.href} className='font-bold text-gray-900'>
+                        <a href={item.href} className='font-bold text-neutral-900'>
                           {item.name}
                           <span className='absolute inset-0' />
                         </a>
-                        <p className='font-small text-gray-500'>
+                        <p className='font-small text-neutral-500'>
                           {item.description}
                         </p>
-                        {/*
-                          <p className='font-small text-gray-500'>
-                          Tecnologías: {item.tecnologia}
-                        </p>
-                          */}
                       </div>
                     </div>
                   ))}
@@ -130,8 +153,8 @@ export const Navbar = () => {
             </Popover.Panel>
           </Transition>
         </Popover>
-        <Popover className='relative ms-5 mt-5'>
-          <Popover.Button className='inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900'>
+        <Popover className='relative mt-3 me-6 '>
+          <Popover.Button className='inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-cyan-600 '>
             <span>Proyectos del Bootcamp</span>
             <ChevronDownIcon className='h-5 w-5' aria-hidden='true' />
           </Popover.Button>
@@ -146,30 +169,30 @@ export const Navbar = () => {
             leaveTo='opacity-0 translate-y-1'
           >
             <Popover.Panel className='absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4'>
-              <div className='w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5'>
+              <div className='w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-neutral-900/5'>
                 <div className='p-4'>
                   {proyectos.map(item => (
                     <div
                       key={item.name}
-                      className='group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-200'
+                      className='group relative flex gap-x-6 rounded-lg p-4 hover:bg-neutral-200'
                     >
-                      <div className='mt-4 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white'>
-                        <img className='h-12 w-16' src={item.imageUrl} alt='' />
+                      <div className='mt-4 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-neutral-50 group-hover:bg-white'>
+                        <item.icon className="h-5 w-5 flex-none text-cyan-600" aria-hidden="true" />
                       </div>
                       <div>
                         <a
                           href={item.href}
                           target={'_blank'}
-                          className='font-bold text-gray-900'
+                          className='font-bold text-neutral-900'
                         >
                           {item.name}
                           <span className='absolute inset-0' />
                         </a>
-                        <p className='font-small text-gray-500'>
+                        <p className='font-small text-neutral-500'>
                           {item.description}
                         </p>
                         {/*
-                          <p className='font-small text-gray-500'>
+                          <p className='font-small text-neutral-500'>
                           Tecnologías: {item.tecnologia}
                         </p>
                           */}
