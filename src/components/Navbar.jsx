@@ -112,7 +112,7 @@ export const Navbar = () => {
         </div>
 
         <Popover className='relative ms-3 mt-3'>
-          <Popover.Button className='inline-flex items-center gap-x-1 text-sm font-semibold leading-6  text-cyan-600  '>
+          <Popover.Button className='inline-flex items-center gap-x-1  font-semibold leading-6  text-cyan-600  '>
             <span>Acerca de Mi</span>
             <ChevronDownIcon className='h-5 w-5' aria-hidden='true' />
           </Popover.Button>
@@ -153,8 +153,8 @@ export const Navbar = () => {
             </Popover.Panel>
           </Transition>
         </Popover>
-        <Popover className='relative mt-3 me-6 '>
-          <Popover.Button className='inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-cyan-600 '>
+        <Popover className='relative mt-3 me-8 '>
+          <Popover.Button className='inline-flex items-center gap-x-1  font-semibold leading-6 text-cyan-600 '>
             <span>Proyectos del Bootcamp</span>
             <ChevronDownIcon className='h-5 w-5' aria-hidden='true' />
           </Popover.Button>

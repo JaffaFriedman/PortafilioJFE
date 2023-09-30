@@ -15,14 +15,14 @@ const datos = [
   { name: 'jaffa.friedman@gmail.com', href: '#', icon: Email }
 ]
 const redes = [
-  { name: '', href: 'https://api.whatsapp.com/send/?phone=56998707468text&type=phone_number&app_absent=0', icon: Whatsapp },
+  { name: '', href: 'https://api.whatsapp.com/send/?phone=+56998707468text&type=phone_number&app_absent=0', icon: Whatsapp },
   { name: '', href: 'https://github.com/JaffaFriedman', icon: GitHubIcon },
   { name: '', href: 'https://www.linkedin.com/feed/', icon: LinkedInIcon }
 ]
 export const Footer = () => {
   return (
     <footer className='bg-neutral-300 ' aria-labelledby='footer-heading'>
-      <div className='mx-auto max-w-7xl px-3 pb-2 sm:pt-2 lg:px-2 lg:pt-2'>
+      <div className='mx-auto max-w-7xl px-3 pb-4 sm:pt-4 lg:px-4 lg:pt-4'>
         <div className='xl:grid xl:grid-cols-3 xl:gap-8'>
           <div className='grid grid-cols-1 '>
             {datos.map(item => (
