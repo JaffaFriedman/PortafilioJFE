@@ -1,14 +1,11 @@
 'use client'
-import Link from 'next/link'
 import Image from 'next/image'
 export const metadata = {
   title: 'portafolio',
   description: ''
 }
  
-
 export default function Home () {
- 
   return (
     <div className='bg-white'>
       <div className='relative isolate overflow-hidden bg-gradient-to-b from-cyan-100/20 pt-14'>
